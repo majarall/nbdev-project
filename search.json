@@ -1,0 +1,62 @@
+[
+  {
+    "objectID": "deck.html",
+    "href": "deck.html",
+    "title": "Deck of cards",
+    "section": "",
+    "text": "from nbdev.showdoc import *\nfrom nbdev_project.card import Card\nfrom fastcore.test import *\n\n\nsource\n\nDeck\n\n Deck ()\n\nInitialize self. See help(type(self)) for accurate signature.\nCreate a deck of card and check that there is 52 cards there.\n\ndeck = Deck()\ntest_eq(len(deck), 52)\n\n\nCard??\n\nInit signature: Card(suit: int, rank: int)\nSource:        \nclass Card:\n    \"\"\"A playing card, created by passing in rank from ranks and suit from suits\"\"\"\n    def __init__(self, \n                 suit:int,     # An index into suits \n                 rank:int):    # An index into ranks\n        self.suit = suit\n        self.rank = rank \n    def __str__(self):\n        return f\"{ranks[self.rank]}{suits[self.suit]}\"\n    \n    def __eq__(self,a):\n        if isinstance(a,Card):\n            return (self.suit,self.rank) == (a.suit, a.rank)\n        else:\n            return False\n\n    __repr__ = __str__           # use the same formating as jupyter\nFile:           ~/git/nbdev-project/nbdev_project/card.py\nType:           type\nSubclasses:     \n\n\n\nsource\n\n\nDeck.pop\n\n Deck.pop ()\n\n\ntest_eq(deck.pop(), Card(3,13))",
+    "crumbs": [
+      "Deck of cards"
+    ]
+  },
+  {
+    "objectID": "00_cards.html",
+    "href": "00_cards.html",
+    "title": "nbdev-project",
+    "section": "",
+    "text": "Card - A basic playing Card\nA simple API for creating playing card\n\nsource\n\n\nCard\n\n Card (suit:int, rank:int)\n\nA playing card, created by passing in rank from ranks and suit from suits\n\n\n\n\nType\nDetails\n\n\n\n\nsuit\nint\nAn index into suits\n\n\nrank\nint\nAn index into ranks\n\n\n\n\n\nComparison Operators\nEquality, less than and greater than work on the rank and indicies\n\n@patch\ndef __eq__(self:Card, a:Card): return (self.suit, self.rank) == (a.suit, a.rank)",
+    "crumbs": [
+      "Card - A basic playing Card"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "nbdev-project",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation.",
+    "crumbs": [
+      "nbdev-project"
+    ]
+  },
+  {
+    "objectID": "index.html#developer-guide",
+    "href": "index.html#developer-guide",
+    "title": "nbdev-project",
+    "section": "Developer Guide",
+    "text": "Developer Guide\nIf you are new to using nbdev here are some useful pointers to get you started.\n\nInstall nbdev_project in Development mode\n# make sure nbdev_project package is installed in development mode\n$ pip install -e .\n\n# make changes under nbs/ directory\n# ...\n\n# compile to have changes apply to nbdev_project\n$ nbdev_prepare",
+    "crumbs": [
+      "nbdev-project"
+    ]
+  },
+  {
+    "objectID": "index.html#usage",
+    "href": "index.html#usage",
+    "title": "nbdev-project",
+    "section": "Usage",
+    "text": "Usage\n\nInstallation\nInstall latest from the GitHub repository:\n$ pip install git+https://github.com/majarall/nbdev-project.git\nor from conda\n$ conda install -c majarall nbdev_project\nor from pypi\n$ pip install nbdev_project\n\n\nDocumentation\nDocumentation can be found hosted on this GitHub repository’s pages. Additionally you can find package manager specific guidelines on conda and pypi respectively.",
+    "crumbs": [
+      "nbdev-project"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "nbdev-project",
+    "section": "How to use",
+    "text": "How to use\nThis lib provides a Card class you can use to create, display and compare playing cards:\n\nc = Card(suit=1, rank=10)\nprint(c)\n\n10♥",
+    "crumbs": [
+      "nbdev-project"
+    ]
+  }
+]
