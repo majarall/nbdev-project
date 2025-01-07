@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "nbdev-project"
+  site-url: "https://majarall.github.io/nbdev-project"
+  description: "nbdev project example"
+  repo-branch: main
+  repo-url: "https://github.com/majarall/nbdev-project"
